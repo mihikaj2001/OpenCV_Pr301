@@ -39,7 +39,7 @@ def SSIM_similarity(imageA, imageB):
 def frameExtract():
 
   # path to video
-  vid = cv2.VideoCapture("D:\sem 6\sem project\onetest/slaps.mp4")
+  vid = cv2.VideoCapture("D:\sem 6\sem project\onetest/jb_trim.mp4")
   
   try:
 
@@ -80,7 +80,7 @@ def frameExtract():
 #driver code begins here
 
 # 1) Divide the video into frames and store 
-# frameExtract()
+frameExtract()
 
 # 2) Convert images to matrix form
 img1_path = os.getcwd()
