@@ -54,7 +54,7 @@ def orbSimilarity(img1, img2):
 def frameExtract():
 
   # path to video
-  vid = cv2.VideoCapture("D:\sem 6\sem project\onetest/jb_trim.mp4")
+  vid = cv2.VideoCapture("D:\sem 6\sem project\onetest/toy_20sec.mp4")
   
   try:
 
@@ -74,7 +74,7 @@ def frameExtract():
 
       if success:
           # continue creating images until video remains
-          name = './images/frame' + str(currentframe) + '.jpg'
+          name = './images/' + str(currentframe) + '.jpg'
           # print('Creating...' + name)
 
           # writing the extracted images
@@ -95,7 +95,7 @@ def frameExtract():
 #driver code begins here
 
 # 1) Divide the video into frames and store 
-# frameExtract()
+frameExtract()
 
 # 2) Convert images to matrix form
 img1_path = os.getcwd()
@@ -117,7 +117,7 @@ iterator = 0
 image_files_sorted = sorted(image_files, key=lambda x: int(os.path.splitext(x)[0]))
 
 for image in range(len(image_files_sorted)-1):
-    print(image)
+    # print(image)
 
     #  convert both images in imread form 
     img1 = cv2.imread(image_files_sorted[image])
