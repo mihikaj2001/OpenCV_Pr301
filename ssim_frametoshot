@@ -80,7 +80,7 @@ def frameExtract():
 #driver code begins here
 
 # 1) Divide the video into frames and store 
-# frameExtract()
+frameExtract()
 
 # 2) Convert images to matrix form
 img1_path = os.getcwd()
@@ -102,28 +102,28 @@ iterator = 0
 image_files_sorted = sorted(image_files, key=lambda x: int(os.path.splitext(x)[0]))
 
 # to break the movie into frames
-# for image in range(len(image_files_sorted)-1):
-#     # print(image)
+for image in range(len(image_files_sorted)-1):
+    # print(image)
 
-#     #  convert both images in imread form 
-#     img1 = cv2.imread(image_files_sorted[image])
-#     img2 = cv2.imread(image_files_sorted[image+1])
+    #  convert both images in imread form 
+    img1 = cv2.imread(image_files_sorted[image])
+    img2 = cv2.imread(image_files_sorted[image+1])
 
 
-#     # read_images.append(cv2.imread(image, 0))
+    # read_images.append(cv2.imread(image, 0))
 
-#     # Convert it to grayscale
-#     img1_bw = cv2.cvtColor(img1,cv2.COLOR_BGR2GRAY)
-#     img2_bw = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+    # Convert it to grayscale
+    img1_bw = cv2.cvtColor(img1,cv2.COLOR_BGR2GRAY)
+    img2_bw = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
-#     # Initialize the ORB detector algorithm
-#     # print("Going to orb sim")
-#     SSIM = SSIM_similarity(img1_bw, img2_bw)
-#     # print(SSIM)
+    # Initialize the ORB detector algorithm
+    # print("Going to orb sim")
+    SSIM = SSIM_similarity(img1_bw, img2_bw)
+    # print(SSIM)
 
-#     # print("Orb similarity: ")
-#     # print(orb)
-#     struct_sim.append(SSIM)
+    # print("Orb similarity: ")
+    # print(orb)
+    struct_sim.append(SSIM)
   
 
 mean_height = 0
