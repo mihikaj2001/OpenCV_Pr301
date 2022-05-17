@@ -137,6 +137,10 @@ for image in range(len(image_files_sorted)-1):
     # print(orb)
     orb_sim.append(orb)
 
+print(orb_sim)
+with open("orb_similarityVals.txt", "w") as output:
+    output.write(str(orb_sim))
+
 
 # for idx in enumerate(orb_sim):
 #   print(idx, idx+1 , orb_sim[idx])
