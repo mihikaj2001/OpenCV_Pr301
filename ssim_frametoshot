@@ -39,7 +39,7 @@ def SSIM_similarity(imageA, imageB):
 def frameExtract():
 
   # path to video
-  vid = cv2.VideoCapture("D:\sem 6\sem project\onetest/jb_trim.mp4")
+  vid = cv2.VideoCapture("D:\sem 6\sem project\onetest/toy_20sec.mp4")
   
   try:
 
@@ -163,12 +163,12 @@ def generate_video():
     # the width, height of first image
     height, width, layers = frame.shape  
   
-    video = cv2.VideoWriter(video_name, 0, 1, (width, height)) 
+    video = cv2.VideoWriter(video_name, 0, 24, (width, height)) 
   
     # Appending the images to the video one by one
     for image in image_files_sorted: 
         video.write(cv2.imread(os.path.join(image_folder, image))) 
-        print("writing image into the video")
+        # print("writing image into the video")
       
     # Deallocating memories taken for window creation
     cv2.destroyAllWindows() 
@@ -177,6 +177,7 @@ def generate_video():
   
 # Calling the generate_video function
 generate_video()
+print("done generating video")
 
 
 # similarityPlot(struct_sim)
