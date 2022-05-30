@@ -124,8 +124,8 @@ for image in range(len(image_files_sorted)-1):
     # print(orb)
     struct_sim.append(SSIM)
   
-with open("orb_similarityVals.txt", "w") as output:
-   output.write(str(orb_sim))
+with open("struct_similarityVals.txt", "w") as output:
+   output.write(str(struct_sim))
 # for image in enumerate(orb_sim):
 #     similarityPlot(image)
 #     print(image)
